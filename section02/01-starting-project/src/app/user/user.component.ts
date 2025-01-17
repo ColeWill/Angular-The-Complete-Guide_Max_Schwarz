@@ -1,4 +1,10 @@
-import { Component, EventEmitter, Input, Output } from "@angular/core";
+import {
+  Component,
+  EventEmitter,
+  Input,
+  Output,
+  //  'output' // ngSignals
+} from "@angular/core";
 
 @Component({
   selector: "app-user",
@@ -17,7 +23,8 @@ export class UserComponent {
   // name = input.required<string>();
   // id = input.required<string>();
 
-  @Output() select = new EventEmitter();
+  @Output() select = new EventEmitter<string>();
+  // select = output<string>(); // Signals way to emit events
 
   get imagePath() {
     return "assets/users/" + this.avatar;
