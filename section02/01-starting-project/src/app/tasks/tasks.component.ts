@@ -14,8 +14,6 @@ export class TasksComponent {
 
   usersTasks = [];
 
-  getUsersTasks() {}
-
   tasks = [
     {
       id: "t1",

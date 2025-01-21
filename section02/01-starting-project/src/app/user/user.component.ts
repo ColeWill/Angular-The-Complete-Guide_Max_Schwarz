@@ -5,7 +5,7 @@ import {
   Output,
   //  'output' // ngSignals
 } from "@angular/core";
-import { User } from "../app.component";
+import { User } from "./user.model";
 
 @Component({
   selector: "app-user",
@@ -16,6 +16,7 @@ import { User } from "../app.component";
 })
 export class UserComponent {
   @Input({ required: true }) user!: User;
+  @Input({ required: true }) selected!: boolean;
 
   // Signals Approach
   // avatar = input.required<string>();
