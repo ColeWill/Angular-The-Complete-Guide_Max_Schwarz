@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { UserInputComponent } from './user-input/user-input.component';
 import { InvestmentInput, InvestmentResults } from './models/investment-input';
@@ -6,7 +7,12 @@ import { InvestmentResultsComponent } from './investment-results/investment-resu
 
 @Component({
   selector: 'app-root',
-  imports: [HeaderComponent, UserInputComponent, InvestmentResultsComponent],
+  imports: [
+    HeaderComponent,
+    UserInputComponent,
+    InvestmentResultsComponent,
+    CommonModule,
+  ],
   standalone: true,
   templateUrl: './app.component.html',
 })
